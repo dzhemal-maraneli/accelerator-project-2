@@ -1,0 +1,12 @@
+.logo {
+  @include link-reset;
+
+  height: 42px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+  }
+}

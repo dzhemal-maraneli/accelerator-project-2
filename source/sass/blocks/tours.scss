@@ -1,0 +1,256 @@
+.tours__container {
+  position: relative;
+}
+
+.tours__title {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.tours__slider-wrapper {
+  margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.tours__slider-buttons {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 120px;
+  }
+}
+
+.tours__slider {
+  @include list-reset;
+}
+
+.tours__slider .tours__slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  background-color: $accent-color;
+  color: $white-color;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 380px;
+  }
+}
+
+.tours__slide-image-wrapper {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: 1;
+    background: $tours-gradient;
+  }
+}
+
+.tours__slide-image {
+  display: block;
+}
+
+.tours__slide-content {
+  padding: 30px 20px;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  z-index: 2;
+}
+
+.tours__slide-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+    justify-content: space-between;
+  }
+}
+
+.tours__geo {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  background-color: $accent-color;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("/__spritemap#sprite-geo-icon-view");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.tours__time {
+  @include list-reset;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tours__time-item {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--days::before {
+    background-image: url("/__spritemap#sprite-sun-icon-view");
+  }
+
+  &--nights::before {
+    background-image: url("/__spritemap#sprite-moon-icon-view");
+  }
+}
+
+.tours__slide-title {
+  position: relative;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 16px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $white-color;
+    opacity: 0.2;
+  }
+}
+
+.tours__slide-properties {
+  @include list-reset;
+
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.tours__slide-properties-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 7px;
+
+  &:first-child {
+    gap: 4px;
+  }
+}
+
+.tours__slide-properties-title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+}
+
+.tours__slide-stars {
+  @include list-reset;
+
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.tours__slide-stars-item {
+  width: 16px;
+  height: 16px;
+  background-image: url("/__spritemap#sprite-star-icon-view");
+
+  &--active {
+    background-image: url("/__spritemap#sprite-star-active-icon-view");
+  }
+}
+
+
+.tours__slide-properties-text {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+}
+
+.tours__link {
+  @include link-reset;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-text-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 10px;
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 14px;
+    background-color: $main-text-color;
+    mask-image: url("/__spritemap#sprite-link-arrow-icon-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

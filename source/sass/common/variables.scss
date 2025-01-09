@@ -1,0 +1,18 @@
+/* FONTS */
+$main-font: "Montserrat", sans-serif;
+
+/* COLORS */
+$white-color: #ffffff;
+$accent-color: #0266c1;
+$accent-color-02: rgba(2, 102, 193, 0.2);
+$main-text-color: #2d383f;
+$main-text-color-03: rgba(45, 56, 63, 0.3);
+$grey-color: #999999;
+$shadow-color: rgba(28, 51, 116, 0.1);
+$hero-gradient: linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0) 100%);
+$tours-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 100%);
+
+/* VIEWPORTS */
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

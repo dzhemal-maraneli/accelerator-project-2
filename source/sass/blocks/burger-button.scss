@@ -1,0 +1,60 @@
+.burger-button {
+  @include button-reset;
+
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.burger-button--active {
+  .burger-button__line {
+    background-color: transparent;
+  }
+
+  .burger-button__line::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .burger-button__line::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.burger-button__line {
+  position: relative;
+  width: 16px;
+  height: 2px;
+  background-color: $white-color;
+  transition: background-color 0.3s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 26px;
+    height: 2px;
+    background-color: $white-color;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  &::before {
+    top: -9px;
+  }
+
+  &::after {
+    bottom: -9px;
+  }
+}

@@ -1,0 +1,53 @@
+.phone {
+  @include link-reset;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: $white-color;
+  padding-top: 2px;
+
+  align-self: flex-end;
+
+  &--dark {
+    color: $main-text-color;
+  }
+
+  &:hover {}
+
+  &:focus {}
+
+  &:active {}
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    align-self: center;
+    padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+// .phone--disabled {
+//   color: $primary-bg;
+//   cursor: auto;
+//   opacity: 0.5;
+
+//   &:hover {
+//     color: $primary-bg;
+//   }
+
+//   &:focus {
+//     color: $primary-bg;
+//   }
+
+//   &:active {
+//     &::before {
+//       background-color: transparent;
+//     }
+//   }
+// }

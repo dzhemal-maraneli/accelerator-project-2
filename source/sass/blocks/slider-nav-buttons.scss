@@ -1,0 +1,38 @@
+.slider-nav-buttons {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.slider-nav-button {
+  @include button-reset;
+
+  width: 37px;
+  height: 35px;
+  background-color: $accent-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 9px;
+    background-color: $white-color;
+    mask-image: url("/__spritemap#sprite-arrow-icon-view");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+  }
+
+  &--next::before {
+    transform: rotate(180deg);
+  }
+
+  &:disabled {
+    background-color: $grey-color;
+  }
+}

@@ -1,0 +1,28 @@
+.page-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.page-body__main {
+  flex-grow: 1;
+
+  background-repeat: no-repeat;
+
+  background-size: 57%;
+  background-position: calc(50% + 184px) 572px;
+
+  // background-image:
+  //   image-set(url("../../img/body/body-clouds-1@1x.webp") 1x type("image/webp"),
+  //     url("../../img/body/body-clouds-1@2x.webp") 2x type("image/webp"),
+  //     url("../../img/body/body-clouds-1@1x.png") 1x type("image/png"),
+  //     url("../../img/body/body-clouds-1@2x.png") 2x type("image/png"));
+
+  @media (min-width: $tablet-width) {
+    background-size: 79%;
+    background-position: calc(50% + 260px) 936px;
+  }
+
+  @media (min-width: $desktop-width) {}
+}
