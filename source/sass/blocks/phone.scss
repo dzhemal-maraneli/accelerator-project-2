@@ -6,18 +6,38 @@
   font-weight: 600;
   color: $white-color;
   padding-top: 2px;
-
   align-self: flex-end;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $white-color-05;
+  }
+
+  &:focus {
+    color: $main-text-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-link-color;
+  }
 
   &--dark {
     color: $main-text-color;
+
+    &:hover {
+      color: $main-text-color-03;
+    }
+
+    &:focus {
+      color: $accent-color;
+      outline: none;
+    }
+
+    &:active {
+      color: $active-link-color;
+    }
   }
-
-  &:hover {}
-
-  &:focus {}
-
-  &:active {}
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -32,22 +52,20 @@
   }
 }
 
-// .phone--disabled {
-//   color: $primary-bg;
-//   cursor: auto;
-//   opacity: 0.5;
+.phone--disabled {
+  color: $grey-color;
+  cursor: default;
+  pointer-events: none;
 
-//   &:hover {
-//     color: $primary-bg;
-//   }
+  &:hover {
+    color: $grey-color;
+  }
 
-//   &:focus {
-//     color: $primary-bg;
-//   }
+  &:focus {
+    color: $grey-color;
+  }
 
-//   &:active {
-//     &::before {
-//       background-color: transparent;
-//     }
-//   }
-// }
+  &:active {
+    color: $grey-color;
+  }
+}

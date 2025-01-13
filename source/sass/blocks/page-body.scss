@@ -1,8 +1,20 @@
 .page-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+
+  &--overlay::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $main-text-color-06;
+    z-index: 2;
+  }
 }
 
 .page-body__main {
@@ -10,19 +22,48 @@
 
   background-repeat: no-repeat;
 
-  background-size: 57%;
-  background-position: calc(50% + 184px) 572px;
+  background-size: auto;
+  background-position: right 578px;
 
-  // background-image:
-  //   image-set(url("../../img/body/body-clouds-1@1x.webp") 1x type("image/webp"),
-  //     url("../../img/body/body-clouds-1@2x.webp") 2x type("image/webp"),
-  //     url("../../img/body/body-clouds-1@1x.png") 1x type("image/png"),
-  //     url("../../img/body/body-clouds-1@2x.png") 2x type("image/png"));
+  background-image:
+    image-set(url("../../img/body/body-clouds-1-mobile@1x.webp") 1x type("image/webp"),
+      url("../../img/body/body-clouds-1-mobile@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-1-mobile@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-1-mobile@2x.png") 2x type("image/png"));
 
   @media (min-width: $tablet-width) {
-    background-size: 79%;
-    background-position: calc(50% + 260px) 936px;
+    background-position: right 942px, right 2283px, center 4066px;
+
+    background-image:
+      image-set(url("../../img/body/body-clouds-1-tablet@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-1-tablet@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-1-tablet@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-1-tablet@2x.png") 2x type("image/png")),
+      image-set(url("../../img/body/body-clouds-2-tablet@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-2-tablet@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-2-tablet@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-2-tablet@2x.png") 2x type("image/png")),
+      image-set(url("../../img/body/body-clouds-3-tablet@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-3-tablet@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-3-tablet@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-3-tablet@2x.png") 2x type("image/png"));
   }
 
-  @media (min-width: $desktop-width) {}
+  @media (min-width: $desktop-width) {
+    background-position: right 674px, right 2283px, center 4066px;
+
+    background-image:
+      image-set(url("../../img/body/body-clouds-1-desktop@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-1-desktop@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-1-desktop@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-1-desktop@2x.png") 2x type("image/png")),
+        image-set(url("../../img/body/body-clouds-2-tablet@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-2-tablet@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-2-tablet@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-2-tablet@2x.png") 2x type("image/png")),
+      image-set(url("../../img/body/body-clouds-3-tablet@1x.webp") 1x type("image/webp"),
+        url("../../img/body/body-clouds-3-tablet@2x.webp") 2x type("image/webp"),
+        url("../../img/body/body-clouds-3-tablet@1x.png") 1x type("image/png"),
+        url("../../img/body/body-clouds-3-tablet@2x.png") 2x type("image/png"));
+  }
 }

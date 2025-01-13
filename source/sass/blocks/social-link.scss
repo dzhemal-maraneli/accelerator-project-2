@@ -1,0 +1,57 @@
+.social-link {
+  border: 1px solid $main-text-color-03;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white-color;
+  transition: border-color 0.3s, background-color 0.3s;
+
+  &:hover {
+    border-color: $main-text-color;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $accent-color;
+    border-color: transparent;
+
+    .social-link-icon {
+      fill: $white-color;
+    }
+  }
+}
+
+.social-link--disabled {
+  cursor: default;
+  pointer-events: none;
+  border-color: $grey-color;
+
+  .social-link-icon {
+    fill: $grey-color;
+  }
+
+  &:hover {
+    border-color: $grey-color;
+  }
+
+  &:focus {
+    border-color: $grey-color;
+  }
+
+  &:active {
+    border-color: $grey-color;
+    background-color: $white-color;
+
+    .social-link-icon {
+      fill: $grey-color;
+    }
+  }
+}
+
+.social-link-icon {
+  fill: $main-text-color;
+}

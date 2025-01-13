@@ -24,7 +24,7 @@
   margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   @media (min-width: $desktop-width) {
@@ -85,22 +85,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 23px;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 142px 1fr 1fr;
     grid-template-rows: auto auto auto;
-    gap: 34px 42px;
+    gap: 34px 20px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 200px 1fr 200px;
-    gap: 22px 114px;
+    gap: 22px 100px;
   }
 }
 
 .footer__logo {
+  width: auto;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -118,7 +120,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
   grid-auto-flow: dense;
-  gap: 15px 50px;
+  gap: 9px 50px;
   justify-content: space-between;
   width: 100%;
 
@@ -127,13 +129,14 @@
     grid-row: 1 / 2;
 
     display: flex;
-    gap: 20px;
-    padding-right: 5px;
+    justify-content: flex-end;
+    gap: 15px;
   }
 
   @media (min-width: $desktop-width) {
+    justify-content: center;
     grid-column: 2 / 3;
-    padding-right: 0;
+    gap: 20px;
   }
 }
 
@@ -151,8 +154,6 @@
 .footer__nav-link {
   @include link-reset;
 
-  font-size: 14px;
-  line-height: 14px;
   text-align: center;
 
   @media (min-width: $desktop-width) {
@@ -183,18 +184,17 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    gap: 18px;
   }
 
-  @media (min-width: $desktop-width) {}
+  @media (min-width: $desktop-width) {
+    gap: 16px;
+  }
 }
 
 .social-list__item-link {
   width: 30px;
   height: 30px;
-  border: 1px solid $main-text-color-03;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -204,11 +204,46 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
+  padding-top: 3px;
+  color: $main-text-color;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $main-text-color-03;
+  }
+
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-link-color;
+  }
+
+  &--disabled {
+    color: $grey-color;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      color: $grey-color;
+    }
+
+    &:focus {
+      color: $grey-color;
+    }
+
+    &:active {
+      color: $grey-color;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     justify-self: center;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {}

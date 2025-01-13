@@ -1,5 +1,6 @@
 .hero__container {
   padding: 0;
+  position: relative;
 }
 
 .hero__slider-wrapper {
@@ -193,9 +194,24 @@
   height: 16px;
   border-radius: 50%;
   border: 1px solid $white-color;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  transition: background-color 0.3s, outline-color 0.3s;
 
   &--active {
     background-color: $white-color;
+  }
+
+  &:hover {
+    background-color: $bullet-hover-color;
+  }
+
+  &:focus {
+    background-color: $white-color-05;
+  }
+
+  &:active {
+    outline-color: $white-color-05;
   }
 
   @media (min-width: $tablet-width) {

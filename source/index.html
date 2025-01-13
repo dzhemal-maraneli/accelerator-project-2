@@ -11,7 +11,7 @@
 <body class="page-body">
 
   <header class="header" data-test="header">
-    <div class="container header__container">
+    <div class="header__container container">
       <button class="burger-button" type="button">
         <div class="burger-button__line"></div>
         <span class="visually-hidden">Открыть меню</span>
@@ -24,34 +24,34 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="">Туры</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#tours">Туры</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="">Обучение</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#training">Обучение</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="">О нас</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#about">О нас</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="">Отзывы</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#reviews">Отзывы</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="">Фотографии</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#gallery">Фотографии</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="">Контакты</a>
+              <a class="nav__link nav-link nav-link--mobile" href="#footer">Контакты</a>
             </li>
           </ul>
         </nav>
-        <a class="phone" href="tel:+78000000000">8 800 000-00-00</a>
+        <a class="phone phone" href="tel:+78000000000">8 800 000-00-00</a>
       </div>
     </div>
   </header>
 
   <main class="page-body__main">
 
-    <section class="hero" data-test="hero">
-      <div class="container hero__container">
+    <section class="hero" data-test="hero" id="hero">
+      <div class="hero__container container">
         <div class="hero__slider-wrapper swiper">
           <ul class="hero__slider swiper-wrapper">
             <li class="hero__slide swiper-slide">
@@ -87,7 +87,7 @@
                   ландшафты и совершите <br> восход
                   на&nbsp;вершину горы Чегет.
                 </p>
-                <a class="hero__slide-link button" href="">Смотреть тур</a>
+                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">6 дней/5 ночей</li>
@@ -128,7 +128,7 @@
                   нетронутых
                   уголков дикой природы в мире.
                 </p>
-                <a class="hero__slide-link button" href="">Смотреть тур</a>
+                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">9 дней/10 ночей</li>
@@ -169,7 +169,7 @@
                   захватывающих дух
                   ландшафтов Алтайских гор.
                 </p>
-                <a class="hero__slide-link button" href="">Смотреть тур</a>
+                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">8 дней/7 ночей</li>
@@ -178,24 +178,23 @@
               </div>
             </li>
           </ul>
-
-          <ul class="hero__pagination">
-            <li class="hero__pagination-item">
-              <button class="hero__pagination-bullet hero__pagination-bullet--active"></button>
-            </li>
-            <li class="hero__pagination-item">
-              <button class="hero__pagination-bullet"></button>
-            </li>
-            <li class="hero__pagination-item">
-              <button class="hero__pagination-bullet"></button>
-            </li>
-          </ul>
         </div>
+        <ul class="hero__pagination">
+          <li class="hero__pagination-item">
+            <button class="hero__pagination-bullet hero__pagination-bullet--active" tabindex="1"></button>
+          </li>
+          <li class="hero__pagination-item">
+            <button class="hero__pagination-bullet" tabindex="1"></button>
+          </li>
+          <li class="hero__pagination-item">
+            <button class="hero__pagination-bullet" tabindex="1"></button>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="tours section" data-test="tours">
-      <div class="container tours__container">
+    <section class="tours section" data-test="tours" id="tours">
+      <div class="tours__container container">
         <h2 class="tours__title section-title" data-title="Ближайшие туры">Ближайшие туры</h2>
 
         <div class="tours__slider-buttons slider-nav-buttons">
@@ -465,8 +464,8 @@
       </div>
     </section>
 
-    <section class="training section" data-test="training">
-      <div class="container training__container">
+    <section class="training section" data-test="training" id="training">
+      <div class="training__container container">
         <div class="training__top">
           <h2 class="training__title section-title" data-title="Обучение">Обучение</h2>
           <p class="training__text">
@@ -520,8 +519,11 @@
                   <h4 class="training__slide-title">
                     Александр <br> Прокофьев
                   </h4>
-                  <a class="training__slide-link" href="">
+                  <a class="training__slide-link social-link" href="">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
+                    <svg class="social-link-icon" width="14" height="8">
+                      <use href="/__spritemap#sprite-vk-icon"></use>
+                    </svg>
                   </a>
                 </div>
 
@@ -558,8 +560,11 @@
                   <h4 class="training__slide-title">
                     Светлана <br> Афиногенова
                   </h4>
-                  <a class="training__slide-link" href="">
+                  <a class="training__slide-link social-link" href="">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
+                    <svg class="social-link-icon" width="14" height="8">
+                      <use href="/__spritemap#sprite-vk-icon"></use>
+                    </svg>
                   </a>
                 </div>
 
@@ -597,8 +602,11 @@
                   <h4 class="training__slide-title">
                     Надежда <br> Колесниченко
                   </h4>
-                  <a class="training__slide-link" href="">
+                  <a class="training__slide-link social-link" href="">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
+                    <svg class="social-link-icon" width="14" height="8">
+                      <use href="/__spritemap#sprite-vk-icon"></use>
+                    </svg>
                   </a>
                 </div>
 
@@ -637,8 +645,11 @@
                   <h4 class="training__slide-title">
                     Федор <br> Кайгородов
                   </h4>
-                  <a class="training__slide-link" href="">
+                  <a class="training__slide-link social-link" href="">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
+                    <svg class="social-link-icon" width="14" height="8">
+                      <use href="/__spritemap#sprite-vk-icon"></use>
+                    </svg>
                   </a>
                 </div>
 
@@ -676,8 +687,11 @@
                   <h4 class="training__slide-title">
                     Даниэль <br> Васнецов
                   </h4>
-                  <a class="training__slide-link" href="">
+                  <a class="training__slide-link social-link" href="">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
+                    <svg class="social-link-icon" width="14" height="8">
+                      <use href="/__spritemap#sprite-vk-icon"></use>
+                    </svg>
                   </a>
                 </div>
 
@@ -711,8 +725,8 @@
       </div>
     </section>
 
-    <section class="about section" data-test="about">
-      <div class="container about__container">
+    <section class="about section" data-test="about" id="about">
+      <div class="about__container container">
         <div class="about__content">
           <h2 data-title="О нас">О нас</h2>
 
@@ -731,9 +745,11 @@
             <li>
               <h3>Наша цель</h3>
               <p>
-                Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём&nbsp;на себя все&nbsp;организационные
+                Подарить вам незабываемые впечатления от похода в горы. Мы&nbsp;берём&nbsp;на себя
+                все&nbsp;организационные
                 вопросы.
-                При&nbsp;организации мы&nbsp;обязательно учтём все ваши пожелания. Вам&nbsp;останется только наслаждаться
+                При&nbsp;организации мы&nbsp;обязательно учтём все ваши пожелания. Вам&nbsp;останется только
+                наслаждаться
                 незабываемым
                 приключением в&nbsp;приятной компании.
               </p>
@@ -743,8 +759,8 @@
       </div>
     </section>
 
-    <section class="reviews section" data-test="reviews">
-      <div class="container reviews__container">
+    <section class="reviews section" data-test="reviews" id="reviews">
+      <div class="reviews__container container">
         <h2 class="reviews__title section-title" data-title="Отзывы">Отзывы</h2>
 
         <div class="reviews__slider-buttons slider-nav-buttons">
@@ -952,8 +968,100 @@
       </div>
     </section>
 
-    <section class="form" data-test="form">
-      <div class="container form__container">
+    <section class="advantages section" data-test="adv" id="advantages">
+      <div class="advantages__container container">
+        <h2 class="advantages__title section-title section-title--centered" data-title="Преимущества">Преимущества</h2>
+
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__icon-wrapper">
+              <svg class="advantages__icon" width="24" height="24">
+                <use href="/__spritemap#sprite-safe-icon"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-content">
+              <h3>Безопасность</h3>
+              <p>
+                Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности.
+                Имеем&nbsp;планы
+                действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.
+              </p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__icon-wrapper">
+              <svg class="advantages__icon advantages__icon--expert" width="24" height="24">
+                <use href="/__spritemap#sprite-expert-icon"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-content">
+              <h3>Экспертиза и знания</h3>
+              <p>
+                Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности.
+                <br>
+                Это гарантирует, что&nbsp;наши клиенты находятся в&nbsp;надёжных руках и могут в&nbsp;полной мере
+                насладиться опытом без&nbsp;опасений.
+              </p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__icon-wrapper">
+              <svg class="advantages__icon" width="22" height="22">
+                <use href="/__spritemap#sprite-equipment-icon"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-content">
+              <h3>Оборудование и снаряжение</h3>
+              <p>
+                Мы предоставляем клиентам все&nbsp;необходимое оборудование, необходимое для путешествия.
+                Это&nbsp;избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение,
+                что&nbsp;делает
+                путешествие более удобным и&nbsp;экономически выгодным.
+              </p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__icon-wrapper">
+              <svg class="advantages__icon" width="24" height="24">
+                <use href="/__spritemap#sprite-path-icon"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-content">
+              <h3>Индивидуальные маршруты</h3>
+              <p>
+                Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам.
+                Мы&nbsp;также&nbsp;можем
+                адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям, чтобы вы получили
+                индивидуальный опыт.
+              </p>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__icon-wrapper">
+              <svg class="advantages__icon" width="24" height="24">
+                <use href="/__spritemap#sprite-nature-icon"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-content">
+              <h3>Бережное отношение&#8239;&#8239;<br>к природе</h3>
+              <p>
+                Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное
+                воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="gallery section" data-test="gallery" id="gallery">
+      <div class="gallery__container container">
+        <h2 class="gallery__title section-title" data-title="Фотогалерея">Фотогалерея</h2>
+      </div>
+    </section>
+
+    <section class="form" data-test="form" id="form">
+      <div class="form__container container">
         <div class="form__top">
           <h2 class="form__title">Остались вопросы?</h2>
           <p class="form__text">
@@ -977,7 +1085,7 @@
 
   </main>
 
-  <footer class="footer" data-test="footer">
+  <footer class="footer" data-test="footer" id="footer">
 
     <div class="footer__contacts section">
       <div class="container footer__contacts-container">
@@ -993,14 +1101,23 @@
         <address class="contacts">
           <ul class="contacts__list">
             <li class="contacts__item contacts__item--phone">
+              <svg class="contacts__item-icon" width="22" height="22">
+                <use href="/__spritemap#sprite-phone-icon"></use>
+              </svg>
               <h3 class="contacts__item-title">Телефон</h3>
               <a class="contacts__item-link" href="">+7 983 745-45-45</a>
             </li>
             <li class="contacts__item contacts__item--email">
+              <svg class="contacts__item-icon" width="22" height="22">
+                <use href="/__spritemap#sprite-mail-icon"></use>
+              </svg>
               <h3 class="contacts__item-title">Email</h3>
               <a class="contacts__item-link" href="">info@lifetour.com</a>
             </li>
             <li class="contacts__item contacts__item--address">
+              <svg class="contacts__item-icon" width="22" height="22">
+                <use href="/__spritemap#sprite-pin-icon"></use>
+              </svg>
               <h3 class="contacts__item-title">Адрес</h3>
               <p class="contacts__item-text">г. Москва, пр-т Мира,<br> д. 14, офис 101</p>
             </li>
@@ -1032,27 +1149,28 @@
 
     <div class="footer__box">
       <div class="container footer__box-container">
-        <a class="logo footer__logo" href="#">
+        <a class="footer__logo logo logo--dark" href="#">
           <img class="logo__img" width="142" height="42" src="./img/logo-dark.svg" alt="Логотип LifeTour">
         </a>
+
         <ul class="footer__nav">
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Туры</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#tours">Туры</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Обучение</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#training">Обучение</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">О нас</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#about">О нас</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Отзывы</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#reviews">Отзывы</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Фотографии</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#gallery">Фотографии</a>
           </li>
           <li class="footer__nav-item">
-            <a class="footer__nav-link" href="">Контакты</a>
+            <a class="footer__nav-link nav-link nav-link--dark" href="#contacts">Контакты</a>
           </li>
         </ul>
 
@@ -1060,22 +1178,22 @@
 
         <ul class="social-list">
           <li class="social-list__item">
-            <a class="social-list__item-link social-list__item-link--vk" href="">
-              <svg class="icon" width="16" height="16">
+            <a class="social-list__item-link social-list__item-link--vk social-link" href="">
+              <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-vk-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__item-link social-list__item-link--ok" href="">
-              <svg class="icon" width="16" height="16">
+            <a class="social-list__item-link social-list__item-link--ok social-link" href="">
+              <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-ok-icon"></use>
               </svg>
             </a>
           </li>
           <li class=" social-list__item">
-            <a class="social-list__item-link social-list__item-link--reddit" href="">
-              <svg class="icon" width="16" height="16">
+            <a class="social-list__item-link social-list__item-link--reddit social-link" href="">
+              <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-reddit-icon"></use>
               </svg>
             </a>
@@ -1091,6 +1209,3 @@
 </body>
 
 </html>
-
-<!-- <div data-test="adv">adv</div> -->
-<!-- <div data-test="gallery">gallery</div> -->

@@ -10,7 +10,7 @@ const heroSwiper = new Swiper('.hero__slider-wrapper', {
   pagination: {
     el: '.hero__pagination',
     bulletClass: 'hero__pagination-bullet',
-    bulletElement: 'li',
+    bulletElement: 'button',
     clickable: true,
     bulletActiveClass: 'hero__pagination-bullet--active'
   },
@@ -63,7 +63,7 @@ const reviewsSwiper = new Swiper('.reviews__slider-wrapper', {
   modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 1,
-  spaceBetween: 20,
+  // spaceBetween: 20,
   navigation: {
     nextEl: '.reviews__slider-button--next',
     prevEl: '.reviews__slider-button--prev',

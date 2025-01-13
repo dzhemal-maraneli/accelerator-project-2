@@ -30,6 +30,7 @@
     &::before {
       font-size: 40px;
       line-height: 40px;
+      top: 5px;
     }
   }
 
@@ -41,6 +42,18 @@
     &::before {
       font-size: 55px;
       line-height: 55px;
+      top: 3px;
     }
+  }
+}
+
+.section-title--centered {
+  justify-content: center;
+
+  &::before {
+    width: auto;
+    left: 50%;
+    top: 3px;
+    transform: translateX(-50%);
   }
 }

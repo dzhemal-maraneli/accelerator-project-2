@@ -1,7 +1,8 @@
 .reviews {
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-
+    padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,7 +23,7 @@
     // margin: 0;
     // padding-left: calc((100% - $tablet-width) / 2);
     padding-right: 0;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
   }
 

@@ -17,6 +17,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color 0.3s, background-color 0.3s;
+
+  &:hover {
+    background-color: $white-color;
+    outline-color: $active-link-color;
+
+    &::before {
+      background-color: $active-link-color;
+    }
+  }
+
+  &:focus {
+    background-color: $white-color;
+    outline: none;
+
+    &::before {
+      background-color: $active-link-color;
+    }
+  }
+
+  &:active {
+    background-color: $active-link-color;
+
+    &::before {
+      background-color: $active-link-color;
+    }
+  }
+
+  &:disabled {
+    background-color: $grey-color;
+    outline: none;
+    cursor: default;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
 
   &::before {
     content: "";
@@ -26,13 +65,10 @@
     mask-image: url("/__spritemap#sprite-arrow-icon-view");
     mask-repeat: no-repeat;
     mask-size: cover;
+    transition: background-color 0.3s;
   }
 
   &--next::before {
     transform: rotate(180deg);
-  }
-
-  &:disabled {
-    background-color: $grey-color;
   }
 }

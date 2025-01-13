@@ -10,4 +10,52 @@
   min-width: 180px;
   text-align: center;
   background-color: $accent-color;
+  outline: 1px solid transparent;
+  transition: color 0.3s, background-color 0.3s, outline-color 0.3s;
+
+  &:hover {
+    background-color: $white-color;
+    color: $active-link-color;
+    outline-color: $active-link-color;
+  }
+
+  &:focus {
+    background-color: $white-color;
+    color: $active-link-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $active-link-color;
+    color: $white-color;
+  }
+
+  &:disabled {
+    background-color: $grey-color;
+    color: $white-color;
+    outline: none;
+  }
+}
+
+.button--disabled {
+  background-color: $grey-color;
+  color: $white-color;
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    background-color: $grey-color;
+    color: $white-color;
+    outline: none;
+  }
+
+  &:focus {
+    background-color: $grey-color;
+    color: $white-color;
+  }
+
+  &:active {
+    background-color: $grey-color;
+    color: $white-color;
+  }
 }
