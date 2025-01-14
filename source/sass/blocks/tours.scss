@@ -14,12 +14,16 @@
   }
 }
 
-.tours__slider-wrapper {
+.tours__slider {
   margin-bottom: 25px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 53px;
   }
+}
+
+.tours__slider-wrapper {
+  @include list-reset;
 }
 
 .tours__slider-buttons {
@@ -32,10 +36,6 @@
   @media (min-width: $desktop-width) {
     right: 120px;
   }
-}
-
-.tours__slider {
-  @include list-reset;
 }
 
 .tours__slider .tours__slide {

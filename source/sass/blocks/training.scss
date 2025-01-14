@@ -107,7 +107,7 @@
   right: 0;
 }
 
-.training__slider-wrapper {
+.training__slider {
   width: 290px;
 
   @media (min-width: $tablet-width) {
@@ -119,11 +119,11 @@
   }
 }
 
-.training__slider {
+.training__slider-wrapper {
   @include list-reset;
 }
 
-.training__slider .training__slide {
+.training__slider-wrapper .training__slide {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

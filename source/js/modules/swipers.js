@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Pagination, Navigation } from 'swiper/modules';
 
-const heroSwiper = new Swiper('.hero__slider-wrapper', {
+const heroSwiper = new Swiper('.hero__slider', {
   modules: [Pagination],
   direction: 'horizontal',
   slidesPerView: 1,
@@ -16,7 +16,7 @@ const heroSwiper = new Swiper('.hero__slider-wrapper', {
   },
 });
 
-const toursSwiper = new Swiper('.tours__slider-wrapper', {
+const toursSwiper = new Swiper('.tours__slider', {
   modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 1,
@@ -37,7 +37,7 @@ const toursSwiper = new Swiper('.tours__slider-wrapper', {
   }
 });
 
-const trainingSwiper = new Swiper('.training__slider-wrapper', {
+const trainingSwiper = new Swiper('.training__slider', {
   modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 1,
@@ -59,11 +59,10 @@ const trainingSwiper = new Swiper('.training__slider-wrapper', {
   }
 });
 
-const reviewsSwiper = new Swiper('.reviews__slider-wrapper', {
+const reviewsSwiper = new Swiper('.reviews__slider', {
   modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 1,
-  // spaceBetween: 20,
   navigation: {
     nextEl: '.reviews__slider-button--next',
     prevEl: '.reviews__slider-button--prev',
@@ -80,7 +79,28 @@ const reviewsSwiper = new Swiper('.reviews__slider-wrapper', {
   }
 });
 
+const gallerySwiper = new Swiper('.gallery__slider', {
+  modules: [Navigation],
+  direction: 'horizontal',
+  slidesPerView: 2,
+  spaceBetween: 5,
+  loop: 'true',
+  navigation: {
+    nextEl: '.gallery__slider-button--next',
+    prevEl: '.gallery__slider-button--prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 5,
+    },
+  }
+});
+
 heroSwiper.slideReset();
 toursSwiper.slideReset();
 trainingSwiper.slideReset();
 reviewsSwiper.slideReset();
+gallerySwiper.slideReset();

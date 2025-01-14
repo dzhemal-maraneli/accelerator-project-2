@@ -62,12 +62,12 @@
 .reviews__slider-button {
 }
 
-.reviews__container .reviews__slider-wrapper {
+.reviews__container .reviews__slider {
   padding: 20px;
   margin: -20px;
 }
 
-.reviews__slider {
+.reviews__slider-wrapper {
   @include list-reset;
 
   @media (min-width: $tablet-width) {
@@ -79,7 +79,7 @@
   }
 }
 
-.reviews__slider .reviews__slide {
+.reviews__slider-wrapper .reviews__slide {
   position: relative;
   padding: 20px;
   box-shadow: 0 0 20px 0 $shadow-color;

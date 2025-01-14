@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.hero__slider-wrapper {
+.hero__slider {
   position: relative;
 
   height: 568px;
@@ -17,11 +17,11 @@
   }
 }
 
-.hero__slider {
+.hero__slider-wrapper {
   @include list-reset;
 }
 
-.hero__slider .hero__slide {
+.hero__slider-wrapper .hero__slide {
   width: 100%;
   height: 100%;
   flex-shrink: 0;
