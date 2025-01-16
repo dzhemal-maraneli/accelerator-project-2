@@ -79,6 +79,26 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   }
 });
 
+// const advantagesSwiper = new Swiper('.advantages__list', {
+//   modules: [Navigation],
+//   direction: 'horizontal',
+//   slidesPerView: 'auto',
+//   navigation: {
+//     nextEl: '.advantages__slider-button--next',
+//     prevEl: '.advantages__slider-button--prev',
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 'auto',
+//       spaceBetween: 30,
+//     },
+//     1440: {
+//       slidesPerView: 'auto',
+//       spaceBetween: 120,
+//     },
+//   }
+// });
+
 const gallerySwiper = new Swiper('.gallery__slider', {
   modules: [Navigation],
   direction: 'horizontal',
@@ -103,4 +123,5 @@ heroSwiper.slideReset();
 toursSwiper.slideReset();
 trainingSwiper.slideReset();
 reviewsSwiper.slideReset();
+// advantagesSwiper.slideReset();
 gallerySwiper.slideReset();
