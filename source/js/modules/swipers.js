@@ -2,6 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Pagination, Navigation } from 'swiper/modules';
 
+let advantagesSwiper = false;
+
 const heroSwiper = new Swiper('.hero__slider', {
   modules: [Pagination],
   direction: 'horizontal',
@@ -79,32 +81,52 @@ const reviewsSwiper = new Swiper('.reviews__slider', {
   }
 });
 
-// const advantagesSwiper = new Swiper('.advantages__list', {
-//   modules: [Navigation],
-//   direction: 'horizontal',
-//   slidesPerView: 'auto',
-//   navigation: {
-//     nextEl: '.advantages__slider-button--next',
-//     prevEl: '.advantages__slider-button--prev',
-//   },
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 'auto',
-//       spaceBetween: 30,
-//     },
-//     1440: {
-//       slidesPerView: 'auto',
-//       spaceBetween: 120,
-//     },
-//   }
-// });
+function advantagesSwiperTogle() {
+  const advantagesSwiperBox = document.querySelector('.advantages__slider');
+
+  if (window.innerWidth >= 1440) {
+    if (!advantagesSwiper) {
+      advantagesSwiperBox.classList.add('swiper');
+      advantagesSwiperBox.querySelector('ul').classList.add('swiper-wrapper');
+      advantagesSwiperBox.querySelectorAll('li').forEach((slide) => {
+        slide.classList.add('swiper-slide');
+      });
+
+      advantagesSwiper = new Swiper('.advantages__slider', {
+        modules: [Navigation],
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        initialSlide: 2,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.advantages__slider-button--next',
+          prevEl: '.advantages__slider-button--prev',
+        },
+      });
+    }
+
+  } else {
+    if (advantagesSwiper) {
+      advantagesSwiper.destroy(true, true);
+      advantagesSwiper = false;
+
+      advantagesSwiperBox.classList.remove('swiper');
+      advantagesSwiperBox.querySelector('ul').classList.remove('swiper-wrapper');
+      advantagesSwiperBox.querySelectorAll('li').forEach((slide) => {
+        slide.classList.remove('swiper-slide');
+      });
+    }
+  }
+}
 
 const gallerySwiper = new Swiper('.gallery__slider', {
   modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 2,
   spaceBetween: 5,
-  loop: 'true',
+  loop: true,
   navigation: {
     nextEl: '.gallery__slider-button--next',
     prevEl: '.gallery__slider-button--prev',
@@ -115,13 +137,19 @@ const gallerySwiper = new Swiper('.gallery__slider', {
     },
     1440: {
       slidesPerView: 5,
+      loop: false,
     },
   }
 });
+
+if (window.innerWidth >= 1440) {
+  gallerySwiper.destroy(true, false);
+}
 
 heroSwiper.slideReset();
 toursSwiper.slideReset();
 trainingSwiper.slideReset();
 reviewsSwiper.slideReset();
-// advantagesSwiper.slideReset();
-gallerySwiper.slideReset();
+advantagesSwiperTogle();
+
+window.addEventListener('resize', advantagesSwiperTogle);
