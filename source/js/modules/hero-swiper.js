@@ -10,7 +10,7 @@ const heroSwiper = new Swiper('.hero__slider', {
   pagination: {
     el: '.hero__pagination',
     bulletClass: 'hero__pagination-bullet',
-    bulletElement: 'button',
+    bulletElement: 'li',
     clickable: true,
     bulletActiveClass: 'hero__pagination-bullet--active'
   },
