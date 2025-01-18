@@ -58,6 +58,12 @@ function advantagesSwiperTogle() {
           nextEl: '.advantages__slider-button--next',
           prevEl: '.advantages__slider-button--prev',
         },
+        breakpoints: {
+          1900: {
+            slidesOffsetBefore: -410,
+            slidesOffsetAfter: -410,
+          },
+        }
       });
     }
 

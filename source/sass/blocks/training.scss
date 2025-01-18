@@ -1,8 +1,4 @@
 .training {
-  @media (min-width: $tablet-width) {
-
-  }
-
   @media (min-width: $desktop-width) {
     padding: 40px 0;
   }
@@ -12,10 +8,6 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-
-  @media (min-width: $tablet-width) {
-
-  }
 
   @media (min-width: $desktop-width) {
     gap: 58px;
@@ -36,10 +28,7 @@
   }
 }
 
-.training__title {
-}
-
-.training__text {
+.training__top p {
   margin: 0;
 
   font-size: 14px;

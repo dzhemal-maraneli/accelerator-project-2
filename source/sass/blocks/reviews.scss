@@ -14,17 +14,10 @@
   }
 }
 
-.section {}
-
-.container {}
-
 .reviews__container {
-
   @media (min-width: $tablet-width) {
     position: relative;
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 .reviews__title {
@@ -53,29 +46,25 @@
   }
 }
 
-
-.reviews__slider-button {}
-
 .reviews .reviews__slider {
   padding: 15px;
   margin: -15px;
   width: $mobile-width;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-left: calc(((100vw - $tablet-width) / 2) + 30px);
-    width: calc(100vw - ((100vw - $tablet-width) / 2) - 30px);
+    width: calc(100% - ((100vw - $tablet-width) / 2) - 30px);
   }
 
   @media (min-width: $desktop-width) {
     margin-left: calc(((100vw - $desktop-width) / 2) + 105px);
-    width: calc(100vw - ((100vw - $desktop-width) / 2) - 105px);
+    width: calc(100% - ((100vw - $desktop-width) / 2) - 105px);
   }
 }
 
 .reviews__slider-wrapper {
   @include list-reset;
-
-  @media (min-width: $tablet-width) {}
 
   @media (min-width: $desktop-width) {
     padding: 10px;
@@ -150,8 +139,6 @@
     margin-bottom: 10px;
   }
 
-  @media (min-width: $tablet-width) {}
-
   @media (min-width: $desktop-width) {
     font-size: 14px;
     line-height: 22px;
@@ -182,8 +169,6 @@
     font-size: 13px;
     line-height: 13px;
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 .reviews__slide-author-details {
