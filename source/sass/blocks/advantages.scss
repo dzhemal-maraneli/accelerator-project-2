@@ -44,7 +44,6 @@
   @media (min-width: $desktop-width) {
     margin: 0 -120px;
     width: $desktop-width;
-    overflow: visible;
   }
 }
 
@@ -69,6 +68,7 @@
     gap: unset;
     align-items: unset;
     flex-direction: unset;
+    transform: translate3d(-290px, 0px, 0px);
   }
 }
 

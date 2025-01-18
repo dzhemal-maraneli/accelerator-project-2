@@ -27,43 +27,44 @@
 
   background-image:
     image-set(url("../../img/body/body-clouds-1-mobile@1x.webp") 1x type("image/webp"),
-      url("../../img/body/body-clouds-1-mobile@2x.webp") 2x type("image/webp"),
-      url("../../img/body/body-clouds-1-mobile@1x.png") 1x type("image/png"),
-      url("../../img/body/body-clouds-1-mobile@2x.png") 2x type("image/png"));
+    url("../../img/body/body-clouds-1-mobile@2x.webp") 2x type("image/webp"),
+    url("../../img/body/body-clouds-1-mobile@1x.png") 1x type("image/png"),
+    url("../../img/body/body-clouds-1-mobile@2x.png") 2x type("image/png"));
 
   @media (min-width: $tablet-width) {
     background-position: right 942px, right 2283px, center 4066px;
 
     background-image:
       image-set(url("../../img/body/body-clouds-1-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-1-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-1-tablet@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-1-tablet@2x.png") 2x type("image/png")),
+      url("../../img/body/body-clouds-1-tablet@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-1-tablet@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-1-tablet@2x.png") 2x type("image/png")),
       image-set(url("../../img/body/body-clouds-2-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-2-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-2-tablet@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-2-tablet@2x.png") 2x type("image/png")),
+      url("../../img/body/body-clouds-2-tablet@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-2-tablet@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-2-tablet@2x.png") 2x type("image/png")),
       image-set(url("../../img/body/body-clouds-3-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-3-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-3-tablet@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-3-tablet@2x.png") 2x type("image/png"));
+      url("../../img/body/body-clouds-3-tablet@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-3-tablet@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-3-tablet@2x.png") 2x type("image/png"));
   }
 
   @media (min-width: $desktop-width) {
-    background-position: right 674px, right 2283px, center 4066px;
+    background-size: auto, auto, 2091px 477px;
+    background-position: right 674px, right 2283px, center 3500px;
 
     background-image:
       image-set(url("../../img/body/body-clouds-1-desktop@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-1-desktop@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-1-desktop@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-1-desktop@2x.png") 2x type("image/png")),
-        image-set(url("../../img/body/body-clouds-2-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-2-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-2-tablet@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-2-tablet@2x.png") 2x type("image/png")),
+      url("../../img/body/body-clouds-1-desktop@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-1-desktop@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-1-desktop@2x.png") 2x type("image/png")),
+      image-set(url("../../img/body/body-clouds-2-tablet@1x.webp") 1x type("image/webp"),
+      url("../../img/body/body-clouds-2-desktop@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-2-desktop@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-2-desktop@2x.png") 2x type("image/png")),
       image-set(url("../../img/body/body-clouds-3-tablet@1x.webp") 1x type("image/webp"),
-        url("../../img/body/body-clouds-3-tablet@2x.webp") 2x type("image/webp"),
-        url("../../img/body/body-clouds-3-tablet@1x.png") 1x type("image/png"),
-        url("../../img/body/body-clouds-3-tablet@2x.png") 2x type("image/png"));
+      url("../../img/body/body-clouds-3-desktop@2x.webp") 2x type("image/webp"),
+      url("../../img/body/body-clouds-3-desktop@1x.png") 1x type("image/png"),
+      url("../../img/body/body-clouds-3-desktop@2x.png") 2x type("image/png"));
   }
 }

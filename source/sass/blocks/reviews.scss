@@ -1,8 +1,12 @@
 .reviews {
   padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
+    display: block;
   }
 
   @media (min-width: $desktop-width) {
@@ -10,26 +14,17 @@
   }
 }
 
-.section {
-}
+.section {}
 
-.container {
-}
+.container {}
 
 .reviews__container {
+
   @media (min-width: $tablet-width) {
-    // width: 100%;
-    // padding: 0;
-    // margin: 0;
-    // padding-left: calc((100% - $tablet-width) / 2);
-    padding-right: 0;
-    overflow: hidden;
     position: relative;
   }
 
-  @media (min-width: $desktop-width) {
-
-  }
+  @media (min-width: $desktop-width) {}
 }
 
 .reviews__title {
@@ -59,20 +54,28 @@
 }
 
 
-.reviews__slider-button {
-}
+.reviews__slider-button {}
 
-.reviews__container .reviews__slider {
-  padding: 20px;
-  margin: -20px;
+.reviews .reviews__slider {
+  padding: 15px;
+  margin: -15px;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    margin-left: calc(((100vw - $tablet-width) / 2) + 30px);
+    width: calc(100vw - ((100vw - $tablet-width) / 2) - 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: calc(((100vw - $desktop-width) / 2) + 105px);
+    width: calc(100vw - ((100vw - $desktop-width) / 2) - 105px);
+  }
 }
 
 .reviews__slider-wrapper {
   @include list-reset;
 
-  @media (min-width: $tablet-width) {
-
-  }
+  @media (min-width: $tablet-width) {}
 
   @media (min-width: $desktop-width) {
     padding: 10px;
@@ -103,7 +106,20 @@
 }
 
 .reviews__slide-image-wrapper {
+  width: 250px;
+  height: 169px;
   flex-shrink: 0;
+  background-color: $grey-color;
+
+  @media (min-width: $tablet-width) {
+    width: 186px;
+    height: 237px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 258px;
+    height: 253px;
+  }
 }
 
 .reviews__slide-image {
@@ -134,9 +150,7 @@
     margin-bottom: 10px;
   }
 
-  @media (min-width: $tablet-width) {
-
-  }
+  @media (min-width: $tablet-width) {}
 
   @media (min-width: $desktop-width) {
     font-size: 14px;
@@ -169,9 +183,7 @@
     line-height: 13px;
   }
 
-  @media (min-width: $desktop-width) {
-
-  }
+  @media (min-width: $desktop-width) {}
 }
 
 .reviews__slide-author-details {

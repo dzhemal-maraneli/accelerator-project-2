@@ -147,6 +147,17 @@
 }
 
 .training__slide-image-wrapper {
+  width: 260px;
+  height: 200px;
+  background-color: $grey-color;
+
+  @media (min-width: $tablet-width) {
+    width: 182px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 255px;
+  }
 }
 
 .training__slide-image {
@@ -178,9 +189,6 @@
   line-height: 16px;
 }
 
-.training__process {
-}
-
 .training__process-title {
   margin: 0;
   margin-bottom: 25px;
@@ -198,6 +206,7 @@
     font-size: 21px;
     line-height: 21px;
     padding-top: 0;
+    margin-bottom: 27px;
   }
 }
 
@@ -329,13 +338,9 @@
 
   @media (min-width: $desktop-width) {
     max-width: 253px;
-    padding-right: 0;
     font-size: 16px;
     line-height: 24px;
-    padding-left: 10px;
-    padding-bottom: 22px;
-
-    padding: 8px 10px 46px;
+    padding: 0 10px 22px;
 
     &::after {
       display: block;

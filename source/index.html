@@ -4,7 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lifetour</title>
+  <title>Lifetour - организация походов.</title>
+  <link rel="preload" href="./fonts/montserrat/Montserrat-Regular.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat/Montserrat-Light.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat/Montserrat-Medium.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat/Montserrat-SemiBold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat/Montserrat-Bold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat/Montserrat-ExtraBold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="LifeTour">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -13,7 +31,7 @@
   <header class="header" data-test="header">
     <div class="header__container container">
       <button class="burger-button" type="button">
-        <div class="burger-button__line"></div>
+        <span class="burger-button__line"></span>
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
@@ -43,12 +61,13 @@
             </li>
           </ul>
         </nav>
-        <a class="phone phone" href="tel:+78000000000">8 800 000-00-00</a>
+        <a class="phone" href="tel:+78000000000">8 800 000-00-00</a>
       </div>
     </div>
   </header>
 
   <main class="page-body__main">
+    <h1 class="visually-hidden">Сайт по организайии походов Lifetour.</h1>
 
     <section class="hero" data-test="hero" id="hero">
       <div class="hero__container container">
@@ -87,7 +106,7 @@
                   ландшафты и совершите <br> восход
                   на&nbsp;вершину горы Чегет.
                 </p>
-                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
+                <a class="hero__slide-link button" href="#" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">6 дней/5 ночей</li>
@@ -128,7 +147,7 @@
                   нетронутых
                   уголков дикой природы в мире.
                 </p>
-                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
+                <a class="hero__slide-link button" href="#" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">9 дней/10 ночей</li>
@@ -169,7 +188,7 @@
                   захватывающих дух
                   ландшафтов Алтайских гор.
                 </p>
-                <a class="hero__slide-link button" href="" tabindex="0">Смотреть тур</a>
+                <a class="hero__slide-link button" href="#" tabindex="0">Смотреть тур</a>
 
                 <ul class="hero__slide-features">
                   <li class="hero__slide-features-item hero__slide-features-item--moon">8 дней/7 ночей</li>
@@ -181,13 +200,13 @@
         </div>
         <ul class="hero__pagination">
           <li class="hero__pagination-item">
-            <button class="hero__pagination-bullet hero__pagination-bullet--active" tabindex="1"></button>
+            <button class="hero__pagination-bullet hero__pagination-bullet--active" type="button" tabindex="1"></button>
           </li>
           <li class="hero__pagination-item">
-            <button class="hero__pagination-bullet" tabindex="1"></button>
+            <button class="hero__pagination-bullet" type="button" tabindex="1"></button>
           </li>
           <li class="hero__pagination-item">
-            <button class="hero__pagination-bullet" tabindex="1"></button>
+            <button class="hero__pagination-bullet" type="button" tabindex="1"></button>
           </li>
         </ul>
       </div>
@@ -198,10 +217,12 @@
         <h2 class="tours__title section-title" data-title="Ближайшие туры">Ближайшие туры</h2>
 
         <div class="tours__slider-buttons slider-nav-buttons">
-          <button class="tours__slider-button slider-nav-button slider-nav-button--prev tours__slider-button--prev">
+          <button class="tours__slider-button slider-nav-button slider-nav-button--prev tours__slider-button--prev"
+            type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button class="tours__slider-button slider-nav-button slider-nav-button--next tours__slider-button--next">
+          <button class="tours__slider-button slider-nav-button slider-nav-button--next tours__slider-button--next"
+            type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
         </div>
@@ -460,7 +481,7 @@
           </ul>
         </div>
 
-        <a class="tours__link" href="">Показать все туры</a>
+        <a class="tours__link" href="#">Показать все туры</a>
       </div>
     </section>
 
@@ -480,11 +501,13 @@
 
           <div class="training__slider-buttons slider-nav-buttons">
             <button
-              class="training__slider-button slider-nav-button slider-nav-button--prev training__slider-button--prev">
+              class="training__slider-button slider-nav-button slider-nav-button--prev training__slider-button--prev"
+              type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
             </button>
             <button
-              class="training__slider-button slider-nav-button slider-nav-button--next training__slider-button--next">
+              class="training__slider-button slider-nav-button slider-nav-button--next training__slider-button--next"
+              type="button">
               <span class="visually-hidden">Следующий слайд</span>
             </button>
           </div>
@@ -519,7 +542,7 @@
                   <h4 class="training__slide-title">
                     Александр <br> Прокофьев
                   </h4>
-                  <a class="training__slide-link social-link" href="">
+                  <a class="training__slide-link social-link" href="#">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
                     <svg class="social-link-icon" width="14" height="8">
                       <use href="/__spritemap#sprite-vk-icon"></use>
@@ -560,7 +583,7 @@
                   <h4 class="training__slide-title">
                     Светлана <br> Афиногенова
                   </h4>
-                  <a class="training__slide-link social-link" href="">
+                  <a class="training__slide-link social-link" href="#">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
                     <svg class="social-link-icon" width="14" height="8">
                       <use href="/__spritemap#sprite-vk-icon"></use>
@@ -602,7 +625,7 @@
                   <h4 class="training__slide-title">
                     Надежда <br> Колесниченко
                   </h4>
-                  <a class="training__slide-link social-link" href="">
+                  <a class="training__slide-link social-link" href="#">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
                     <svg class="social-link-icon" width="14" height="8">
                       <use href="/__spritemap#sprite-vk-icon"></use>
@@ -645,7 +668,7 @@
                   <h4 class="training__slide-title">
                     Федор <br> Кайгородов
                   </h4>
-                  <a class="training__slide-link social-link" href="">
+                  <a class="training__slide-link social-link" href="#">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
                     <svg class="social-link-icon" width="14" height="8">
                       <use href="/__spritemap#sprite-vk-icon"></use>
@@ -687,7 +710,7 @@
                   <h4 class="training__slide-title">
                     Даниэль <br> Васнецов
                   </h4>
-                  <a class="training__slide-link social-link" href="">
+                  <a class="training__slide-link social-link" href="#">
                     <span class="visually-hidden">Перейти на страницу во Вконтакте.</span>
                     <svg class="social-link-icon" width="14" height="8">
                       <use href="/__spritemap#sprite-vk-icon"></use>
@@ -764,207 +787,209 @@
         <h2 class="reviews__title section-title" data-title="Отзывы">Отзывы</h2>
 
         <div class="reviews__slider-buttons slider-nav-buttons">
-          <button class="reviews__slider-button slider-nav-button slider-nav-button--prev reviews__slider-button--prev">
+          <button class="reviews__slider-button slider-nav-button slider-nav-button--prev reviews__slider-button--prev"
+            type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button class="reviews__slider-button slider-nav-button slider-nav-button--next reviews__slider-button--next">
+          <button class="reviews__slider-button slider-nav-button slider-nav-button--next reviews__slider-button--next"
+            type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
         </div>
 
-        <div class="reviews__slider swiper">
-          <ul class="reviews__slider-wrapper swiper-wrapper">
+      </div>
+      <div class="reviews__slider swiper">
+        <ul class="reviews__slider-wrapper swiper-wrapper">
 
-            <li class="reviews__slide swiper-slide">
-              <div class="reviews__slide-image-wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-1-desktop@1x.webp 1x, ./img/reviews/reviews-1-desktop@2x.webp 2x"
-                    width="258" height="253" type="image/webp">
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-1-desktop@1x.webp 1x, ./img/reviews/reviews-1-desktop@2x.webp 2x"
+                  width="258" height="253" type="image/webp">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-1-tablet@1x.webp 1x, ./img/reviews/reviews-1-tablet@2x.webp 2x"
-                    width="186" height="237" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-1-tablet@1x.webp 1x, ./img/reviews/reviews-1-tablet@2x.webp 2x"
+                  width="186" height="237" type="image/webp">
 
-                  <source media="(min-width: 320px)"
-                    srcset="./img/reviews/reviews-1-mobile@1x.webp 1x, ./img/reviews/reviews-1-mobile@2x.webp 2x"
-                    width="250" height="169" type="image/webp">
+                <source media="(min-width: 320px)"
+                  srcset="./img/reviews/reviews-1-mobile@1x.webp 1x, ./img/reviews/reviews-1-mobile@2x.webp 2x"
+                  width="250" height="169" type="image/webp">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-1-desktop@1x.jpg 1x, ./img/reviews/reviews-1-desktop@2x.jpg 2x"
-                    width="258" height="253" type="image/png">
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-1-desktop@1x.jpg 1x, ./img/reviews/reviews-1-desktop@2x.jpg 2x"
+                  width="258" height="253" type="image/png">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-1-tablet@1x.jpg 1x, ./img/reviews/reviews-1-tablet@2x.jpg 2x"
-                    width="186" height="237" type="image/png">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-1-tablet@1x.jpg 1x, ./img/reviews/reviews-1-tablet@2x.jpg 2x"
+                  width="186" height="237" type="image/png">
 
-                  <img class="reviews__slide-image" src="./img/reviews/reviews-1-mobile@1x.jpg"
-                    srcset="./img/reviews/reviews-1-mobile@2x.jpg 2x" width="250" height="169" alt="">
-                </picture>
+                <img class="reviews__slide-image" src="./img/reviews/reviews-1-mobile@1x.jpg"
+                  srcset="./img/reviews/reviews-1-mobile@2x.jpg 2x" width="250" height="169" alt="">
+              </picture>
+            </div>
+
+            <div class="reviews__slide-content">
+              <div class="reviews__slide-text">
+                <p>
+                  Осенью ходили в поход на Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы, настоящие
+                  эксперты,
+                  всему научили, все&nbsp;показали. Делились историями о&nbsp;местах, людях,&nbsp;культуре места.
+                </p>
+                <p>
+                  С уверенностью могу сказать, что&nbsp;жизнь разделилась на до этого и&nbsp;после. Ещё никогда
+                  не&nbsp;отдыхал так&nbsp;душой
+                  и телом. Всем очень рекомендую!
+                </p>
               </div>
-
-              <div class="reviews__slide-content">
-                <div class="reviews__slide-text">
-                  <p>
-                    Осенью ходили в поход на Алтай с&nbsp;друзьями. Впечатления потрясающие! Инструкторы, настоящие
-                    эксперты,
-                    всему научили, все&nbsp;показали. Делились историями о&nbsp;местах, людях,&nbsp;культуре места.
-                  </p>
-                  <p>
-                    С уверенностью могу сказать, что&nbsp;жизнь разделилась на до этого и&nbsp;после. Ещё никогда
-                    не&nbsp;отдыхал так&nbsp;душой
-                    и телом. Всем очень рекомендую!
-                  </p>
-                </div>
-                <div class="reviews__slide-author-wrapper">
-                  <h3 class="reviews__slide-author">Фролов Александр</h3>
-                  <span class="reviews__slide-author-details">38 лет, Москва</span>
-                </div>
+              <div class="reviews__slide-author-wrapper">
+                <h3 class="reviews__slide-author">Фролов Александр</h3>
+                <span class="reviews__slide-author-details">38 лет, Москва</span>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li class="reviews__slide swiper-slide">
-              <div class="reviews__slide-image-wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-2-desktop@1x.webp 1x, ./img/reviews/reviews-2-desktop@2x.webp 2x"
-                    width="258" height="253" type="image/webp">
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-2-desktop@1x.webp 1x, ./img/reviews/reviews-2-desktop@2x.webp 2x"
+                  width="258" height="253" type="image/webp">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-2-tablet@1x.webp 1x, ./img/reviews/reviews-2-tablet@2x.webp 2x"
-                    width="186" height="237" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-2-tablet@1x.webp 1x, ./img/reviews/reviews-2-tablet@2x.webp 2x"
+                  width="186" height="237" type="image/webp">
 
-                  <source media="(min-width: 320px)"
-                    srcset="./img/reviews/reviews-2-mobile@1x.webp 1x, ./img/reviews/reviews-2-mobile@2x.webp 2x"
-                    width="250" height="169" type="image/webp">
+                <source media="(min-width: 320px)"
+                  srcset="./img/reviews/reviews-2-mobile@1x.webp 1x, ./img/reviews/reviews-2-mobile@2x.webp 2x"
+                  width="250" height="169" type="image/webp">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-2-desktop@1x.jpg 1x, ./img/reviews/reviews-2-desktop@2x.jpg 2x"
-                    width="258" height="253" type="image/png">
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-2-desktop@1x.jpg 1x, ./img/reviews/reviews-2-desktop@2x.jpg 2x"
+                  width="258" height="253" type="image/png">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-2-tablet@1x.jpg 1x, ./img/reviews/reviews-2-tablet@2x.jpg 2x"
-                    width="186" height="237" type="image/png">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-2-tablet@1x.jpg 1x, ./img/reviews/reviews-2-tablet@2x.jpg 2x"
+                  width="186" height="237" type="image/png">
 
-                  <img class="reviews__slide-image" src="./img/reviews/reviews-2-mobile@1x.jpg"
-                    srcset="./img/reviews/reviews-2-mobile@2x.jpg 2x" width="250" height="169" alt="">
-                </picture>
+                <img class="reviews__slide-image" src="./img/reviews/reviews-2-mobile@1x.jpg"
+                  srcset="./img/reviews/reviews-2-mobile@2x.jpg 2x" width="250" height="169" alt="">
+              </picture>
+            </div>
+
+            <div class="reviews__slide-content">
+              <div class="reviews__slide-text">
+                <p>
+                  Хороший полноценный поход <br> с&nbsp;разнообразными локациями. В начале <br> дорога идёт по лыжне,
+                  далее прошли
+                  мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
+                  Было очень интересно!
+                </p>
+                <p>
+                  Инструктор Федор дружелюбный, внимательный&nbsp;к технике безопасности и своим туристам.
+                  Всем советую этот тур.
+                </p>
               </div>
-
-              <div class="reviews__slide-content">
-                <div class="reviews__slide-text">
-                  <p>
-                    Хороший полноценный поход <br> с&nbsp;разнообразными локациями. В начале <br> дорога идёт по лыжне,
-                    далее прошли
-                    мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
-                    Было очень интересно!
-                  </p>
-                  <p>
-                    Инструктор Федор дружелюбный, внимательный&nbsp;к технике безопасности и своим туристам.
-                    Всем советую этот тур.
-                  </p>
-                </div>
-                <div class="reviews__slide-author-wrapper">
-                  <h3 class="reviews__slide-author">Иван Соловьёв</h3>
-                  <span class="reviews__slide-author-details">25 лет, Владивосток</span>
-                </div>
+              <div class="reviews__slide-author-wrapper">
+                <h3 class="reviews__slide-author">Иван Соловьёв</h3>
+                <span class="reviews__slide-author-details">25 лет, Владивосток</span>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li class="reviews__slide swiper-slide">
-              <div class="reviews__slide-image-wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-3-desktop@1x.webp 1x, ./img/reviews/reviews-3-desktop@2x.webp 2x"
-                    width="258" height="253" type="image/webp">
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-3-desktop@1x.webp 1x, ./img/reviews/reviews-3-desktop@2x.webp 2x"
+                  width="258" height="253" type="image/webp">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-3-tablet@1x.webp 1x, ./img/reviews/reviews-3-tablet@2x.webp 2x"
-                    width="186" height="237" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-3-tablet@1x.webp 1x, ./img/reviews/reviews-3-tablet@2x.webp 2x"
+                  width="186" height="237" type="image/webp">
 
-                  <source media="(min-width: 320px)"
-                    srcset="./img/reviews/reviews-3-mobile@1x.webp 1x, ./img/reviews/reviews-3-mobile@2x.webp 2x"
-                    width="250" height="169" type="image/webp">
+                <source media="(min-width: 320px)"
+                  srcset="./img/reviews/reviews-3-mobile@1x.webp 1x, ./img/reviews/reviews-3-mobile@2x.webp 2x"
+                  width="250" height="169" type="image/webp">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-3-desktop@1x.jpg 1x, ./img/reviews/reviews-3-desktop@2x.jpg 2x"
-                    width="258" height="253" type="image/png">
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-3-desktop@1x.jpg 1x, ./img/reviews/reviews-3-desktop@2x.jpg 2x"
+                  width="258" height="253" type="image/png">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-3-tablet@1x.jpg 1x, ./img/reviews/reviews-3-tablet@2x.jpg 2x"
-                    width="186" height="237" type="image/png">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-3-tablet@1x.jpg 1x, ./img/reviews/reviews-3-tablet@2x.jpg 2x"
+                  width="186" height="237" type="image/png">
 
-                  <img class="reviews__slide-image" src="./img/reviews/reviews-3-mobile@1x.jpg"
-                    srcset="./img/reviews/reviews-3-mobile@2x.jpg 2x" width="250" height="169" alt="">
-                </picture>
+                <img class="reviews__slide-image" src="./img/reviews/reviews-3-mobile@1x.jpg"
+                  srcset="./img/reviews/reviews-3-mobile@2x.jpg 2x" width="250" height="169" alt="">
+              </picture>
+            </div>
+
+            <div class="reviews__slide-content">
+              <div class="reviews__slide-text">
+                <p>
+                  Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на
+                  18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем
+                  ожидала, видимо организм уже привык.
+                </p>
+                <p>
+                  Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.
+                </p>
               </div>
-
-              <div class="reviews__slide-content">
-                <div class="reviews__slide-text">
-                  <p>
-                    Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на
-                    18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем
-                    ожидала, видимо организм уже привык.
-                  </p>
-                  <p>
-                    Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.
-                  </p>
-                </div>
-                <div class="reviews__slide-author-wrapper">
-                  <h3 class="reviews__slide-author">Евгения Баженова</h3>
-                  <span class="reviews__slide-author-details">23 года, Кострома</span>
-                </div>
+              <div class="reviews__slide-author-wrapper">
+                <h3 class="reviews__slide-author">Евгения Баженова</h3>
+                <span class="reviews__slide-author-details">23 года, Кострома</span>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li class="reviews__slide swiper-slide">
-              <div class="reviews__slide-image-wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-4-desktop@1x.webp 1x, ./img/reviews/reviews-4-desktop@2x.webp 2x"
-                    width="258" height="253" type="image/webp">
+          <li class="reviews__slide swiper-slide">
+            <div class="reviews__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-4-desktop@1x.webp 1x, ./img/reviews/reviews-4-desktop@2x.webp 2x"
+                  width="258" height="253" type="image/webp">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-4-tablet@1x.webp 1x, ./img/reviews/reviews-4-tablet@2x.webp 2x"
-                    width="186" height="237" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-4-tablet@1x.webp 1x, ./img/reviews/reviews-4-tablet@2x.webp 2x"
+                  width="186" height="237" type="image/webp">
 
-                  <source media="(min-width: 320px)"
-                    srcset="./img/reviews/reviews-4-mobile@1x.webp 1x, ./img/reviews/reviews-4-mobile@2x.webp 2x"
-                    width="250" height="169" type="image/webp">
+                <source media="(min-width: 320px)"
+                  srcset="./img/reviews/reviews-4-mobile@1x.webp 1x, ./img/reviews/reviews-4-mobile@2x.webp 2x"
+                  width="250" height="169" type="image/webp">
 
-                  <source media="(min-width: 1440px)"
-                    srcset="./img/reviews/reviews-4-desktop@1x.jpg 1x, ./img/reviews/reviews-4-desktop@2x.jpg 2x"
-                    width="258" height="253" type="image/png">
+                <source media="(min-width: 1440px)"
+                  srcset="./img/reviews/reviews-4-desktop@1x.jpg 1x, ./img/reviews/reviews-4-desktop@2x.jpg 2x"
+                  width="258" height="253" type="image/png">
 
-                  <source media="(min-width: 768px)"
-                    srcset="./img/reviews/reviews-4-tablet@1x.jpg 1x, ./img/reviews/reviews-4-tablet@2x.jpg 2x"
-                    width="186" height="237" type="image/png">
+                <source media="(min-width: 768px)"
+                  srcset="./img/reviews/reviews-4-tablet@1x.jpg 1x, ./img/reviews/reviews-4-tablet@2x.jpg 2x"
+                  width="186" height="237" type="image/png">
 
-                  <img class="reviews__slide-image" src="./img/reviews/reviews-4-mobile@1x.jpg"
-                    srcset="./img/reviews/reviews-4-mobile@2x.jpg 2x" width="250" height="169" alt="">
-                </picture>
+                <img class="reviews__slide-image" src="./img/reviews/reviews-4-mobile@1x.jpg"
+                  srcset="./img/reviews/reviews-4-mobile@2x.jpg 2x" width="250" height="169" alt="">
+              </picture>
+            </div>
+
+            <div class="reviews__slide-content">
+              <div class="reviews__slide-text">
+                <p>
+                  Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда
+                  наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.
+                </p>
+                <p>
+                  У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у
+                  костра и пели песни. Обязательно повторю такое приключение!
+                </p>
               </div>
-
-              <div class="reviews__slide-content">
-                <div class="reviews__slide-text">
-                  <p>
-                    Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда
-                    наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.
-                  </p>
-                  <p>
-                    У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у
-                    костра и пели песни. Обязательно повторю такое приключение!
-                  </p>
-                </div>
-                <div class="reviews__slide-author-wrapper">
-                  <h3 class="reviews__slide-author">Елена Пирогова</h3>
-                  <span class="reviews__slide-author-details">37 лет, Тюмень</span>
-                </div>
+              <div class="reviews__slide-author-wrapper">
+                <h3 class="reviews__slide-author">Елена Пирогова</h3>
+                <span class="reviews__slide-author-details">37 лет, Тюмень</span>
               </div>
-            </li>
+            </div>
+          </li>
 
-          </ul>
-        </div>
+        </ul>
       </div>
     </section>
 
@@ -973,10 +998,14 @@
         <h2 class="advantages__title section-title section-title--centered" data-title="Преимущества">Преимущества</h2>
 
         <div class="advantages__slider-buttons slider-nav-buttons">
-          <button class="advantages__slider-button slider-nav-button slider-nav-button--prev advantages__slider-button--prev">
+          <button
+            class="advantages__slider-button slider-nav-button slider-nav-button--prev advantages__slider-button--prev"
+            type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button class="advantages__slider-button slider-nav-button slider-nav-button--next advantages__slider-button--next">
+          <button
+            class="advantages__slider-button slider-nav-button slider-nav-button--next advantages__slider-button--next"
+            type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
         </div>
@@ -1043,7 +1072,8 @@
                 <h3>Индивидуальные маршруты</h3>
                 <p>
                   Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам.
-                  Мы&nbsp;также&nbsp;можем адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям, чтобы&nbsp;вы&nbsp;получили индивидуальный опыт.
+                  Мы&nbsp;также&nbsp;можем адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям,
+                  чтобы&nbsp;вы&nbsp;получили индивидуальный опыт.
                 </p>
               </div>
             </li>
@@ -1077,10 +1107,12 @@
         </p>
 
         <div class="gallery__slider-buttons slider-nav-buttons">
-          <button class="gallery__slider-button slider-nav-button slider-nav-button--prev gallery__slider-button--prev">
+          <button class="gallery__slider-button slider-nav-button slider-nav-button--prev gallery__slider-button--prev"
+            type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button class="gallery__slider-button slider-nav-button slider-nav-button--next gallery__slider-button--next">
+          <button class="gallery__slider-button slider-nav-button slider-nav-button--next gallery__slider-button--next"
+            type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
         </div>
@@ -1299,15 +1331,21 @@
           </p>
         </div>
 
-        <form class="form__box" action="">
-          <label class="form__label" for="">
-            <span class="visually-hidden">Введите номер телефона</span>
-            <input class="form__input" type="text" placeholder="Телефон">
-          </label>
-          <label class="form__label" for="">
-            <span class="visually-hidden">Введите электронную почту</span>
-            <input class="form__input" type="text" placeholder="Email">
-          </label>
+        <form class="form__box" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__input-wrapper">
+            <label class="form__label" for="user-phone">
+              Телефон
+              <span class="visually-hidden">Введите номер телефона</span>
+            </label>
+            <input class="form__input" type="text" id="user-phone" name="phone" required>
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label" for="user-email">
+              Email
+              <span class="visually-hidden">Введите электронную почту</span>
+            </label>
+            <input class="form__input" type="text" id="user-email" name="email" required>
+          </div>
           <button class="form__button button" type="submit">Отправить</button>
         </form>
       </div>
@@ -1334,21 +1372,21 @@
               <svg class="contacts__item-icon" width="22" height="22">
                 <use href="/__spritemap#sprite-phone-icon"></use>
               </svg>
-              <h3 class="contacts__item-title">Телефон</h3>
-              <a class="contacts__item-link" href="">+7 983 745-45-45</a>
+              <span class="contacts__item-title">Телефон</span>
+              <a class="contacts__item-link" href="tel:+79837454545">+7 983 745-45-45</a>
             </li>
             <li class="contacts__item contacts__item--email">
               <svg class="contacts__item-icon" width="22" height="22">
                 <use href="/__spritemap#sprite-mail-icon"></use>
               </svg>
-              <h3 class="contacts__item-title">Email</h3>
-              <a class="contacts__item-link" href="">info@lifetour.com</a>
+              <span class="contacts__item-title">Email</span>
+              <a class="contacts__item-link" href="mailto:info@lifetour.com">info@lifetour.com</a>
             </li>
             <li class="contacts__item contacts__item--address">
               <svg class="contacts__item-icon" width="22" height="22">
                 <use href="/__spritemap#sprite-pin-icon"></use>
               </svg>
-              <h3 class="contacts__item-title">Адрес</h3>
+              <span class="contacts__item-title">Адрес</span>
               <p class="contacts__item-text">г. Москва, пр-т Мира,<br> д. 14, офис 101</p>
             </li>
           </ul>
@@ -1408,28 +1446,31 @@
 
         <ul class="social-list">
           <li class="social-list__item">
-            <a class="social-list__item-link social-list__item-link--vk social-link" href="">
+            <a class="social-list__item-link social-link" href="#">
+              <span class="visually-hidden">Перейти в нашу группу во Вконтакте.</span>
               <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-vk-icon"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__item-link social-list__item-link--ok social-link" href="">
+            <a class="social-list__item-link social-link" href="#">
+              <span class="visually-hidden">Перейти в нашу группу в Одноклассниках.</span>
               <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-ok-icon"></use>
               </svg>
             </a>
           </li>
           <li class=" social-list__item">
-            <a class="social-list__item-link social-list__item-link--reddit social-link" href="">
+            <a class="social-list__item-link social-link" href="#">
+              <span class="visually-hidden">Перейти в наш саб на Реддите.</span>
               <svg class="social-link-icon" width="16" height="16">
                 <use href="/__spritemap#sprite-reddit-icon"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="policy-link" href="">Политика конфиденциальности</a>
+        <a class="policy-link" href="#">Политика конфиденциальности</a>
       </div>
     </div>
 

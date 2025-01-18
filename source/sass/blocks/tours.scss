@@ -42,8 +42,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  min-height: 416px;
 
-  background-color: $accent-color;
+  background-color: $grey-color;
   color: $white-color;
   width: 290px;
 
