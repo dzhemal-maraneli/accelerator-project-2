@@ -2,9 +2,10 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 
-const swiperWrapper = document.querySelector('.advantages__slider-wrapper');
-const slides = swiperWrapper.querySelectorAll('.advantages__item');
-let advantagesSwiper = false;
+const advantagesSlider = document.querySelector('.advantages__slider');
+const advantagesSliderWrapper = advantagesSlider.querySelector('.advantages__slider-wrapper');
+const slides = advantagesSliderWrapper.querySelectorAll('.advantages__item');
+let isAdvantagesSwiper = false;
 let isSlidesDuplicated = false;
 
 function duplicateSlides() {
@@ -15,14 +16,14 @@ function duplicateSlides() {
   slides.forEach((slide) => {
     const clonedSlide = slide.cloneNode(true);
     clonedSlide.classList.add('cloned');
-    swiperWrapper.appendChild(clonedSlide);
+    advantagesSliderWrapper.appendChild(clonedSlide);
   });
 
   isSlidesDuplicated = true;
 }
 
 function removeSlides() {
-  const clonedSlides = swiperWrapper.querySelectorAll('.cloned');
+  const clonedSlides = advantagesSliderWrapper.querySelectorAll('.cloned');
 
   clonedSlides.forEach((slide) => {
     slide.remove();
@@ -31,20 +32,18 @@ function removeSlides() {
   isSlidesDuplicated = false;
 }
 
-function advantagesSwiperTogle() {
-  const advantagesSwiperBox = document.querySelector('.advantages__slider');
-
+function isAdvantagesSwiperTogle() {
   if (window.innerWidth >= 1440) {
     duplicateSlides();
 
-    if (!advantagesSwiper) {
-      advantagesSwiperBox.classList.add('swiper');
-      advantagesSwiperBox.querySelector('ul').classList.add('swiper-wrapper');
-      advantagesSwiperBox.querySelectorAll('li').forEach((slide) => {
+    if (!isAdvantagesSwiper) {
+      advantagesSlider.classList.add('swiper');
+      advantagesSlider.querySelector('ul').classList.add('swiper-wrapper');
+      advantagesSlider.querySelectorAll('li').forEach((slide) => {
         slide.classList.add('swiper-slide');
       });
 
-      advantagesSwiper = new Swiper('.advantages__slider', {
+      isAdvantagesSwiper = new Swiper('.advantages__slider', {
         modules: [Navigation],
         direction: 'horizontal',
         slidesPerView: 'auto',
@@ -68,13 +67,13 @@ function advantagesSwiperTogle() {
     }
 
   } else {
-    if (advantagesSwiper) {
-      advantagesSwiper.destroy(true, true);
-      advantagesSwiper = false;
+    if (isAdvantagesSwiper) {
+      isAdvantagesSwiper.destroy(true, true);
+      isAdvantagesSwiper = false;
 
-      advantagesSwiperBox.classList.remove('swiper');
-      advantagesSwiperBox.querySelector('ul').classList.remove('swiper-wrapper');
-      advantagesSwiperBox.querySelectorAll('li').forEach((slide) => {
+      advantagesSlider.classList.remove('swiper');
+      advantagesSlider.querySelector('ul').classList.remove('swiper-wrapper');
+      advantagesSlider.querySelectorAll('li').forEach((slide) => {
         slide.classList.remove('swiper-slide');
       });
 
@@ -83,6 +82,6 @@ function advantagesSwiperTogle() {
   }
 }
 
-advantagesSwiperTogle();
+isAdvantagesSwiperTogle();
 
-window.addEventListener('resize', advantagesSwiperTogle);
+window.addEventListener('resize', isAdvantagesSwiperTogle);

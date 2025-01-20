@@ -13,13 +13,13 @@
 
   background-image:
     image-set(url("../../img/form/form-bg-mobile@1x.webp") 1x type("image/webp"),
-      url("../../img/form/form-bg-mobile@2x.webp") 2x type("image/webp"),
-      url("../../img/form/form-bg-mobile@1x.png") 1x type("image/png"),
-      url("../../img/form/form-bg-mobile@2x.png") 2x type("image/png"));
+    url("../../img/form/form-bg-mobile@2x.webp") 2x type("image/webp"),
+    url("../../img/form/form-bg-mobile@1x.png") 1x type("image/png"),
+    url("../../img/form/form-bg-mobile@2x.png") 2x type("image/png"));
 
   @media (min-width: $tablet-width) {
     background-image:
-    image-set(url("../../img/form/form-bg-tablet@1x.webp") 1x type("image/webp"),
+      image-set(url("../../img/form/form-bg-tablet@1x.webp") 1x type("image/webp"),
       url("../../img/form/form-bg-tablet@2x.webp") 2x type("image/webp"),
       url("../../img/form/form-bg-tablet@1x.png") 1x type("image/png"),
       url("../../img/form/form-bg-tablet@2x.png") 2x type("image/png"));
@@ -27,7 +27,7 @@
 
   @media (min-width: $desktop-width) {
     background-image:
-    image-set(url("../../img/form/form-bg-desktop@1x.webp") 1x type("image/webp"),
+      image-set(url("../../img/form/form-bg-desktop@1x.webp") 1x type("image/webp"),
       url("../../img/form/form-bg-desktop@2x.webp") 2x type("image/webp"),
       url("../../img/form/form-bg-desktop@1x.png") 1x type("image/png"),
       url("../../img/form/form-bg-desktop@2x.png") 2x type("image/png"));
@@ -72,7 +72,7 @@
   }
 }
 
-.form__title {
+.form__top h2 {
   margin: 0;
   color: $white-color;
   font-size: 22px;
@@ -92,7 +92,7 @@
   }
 }
 
-.form__text {
+.form__top p {
   margin: 0;
   color: $white-color;
   font-size: 12px;
@@ -141,21 +141,19 @@
   font-size: 16px;
   line-height: 16px;
   opacity: 0.5;
+  color: $main-text-color;
 
   top: 17px;
   left: 15px;
-
-  &--disabled {
-    display: none;
-  }
 
   @media (min-width: $tablet-width) {
     top: 20px;
     left: 30px;
   }
 
-  @media (min-width: $desktop-width) {
-
+  &--disabled {
+    color: transparent;
+    top: -10px;
   }
 }
 
@@ -176,10 +174,14 @@
   transition: outline-color 0.3s;
 
   &::placeholder {
-    color: rgba($main-text-color, 0.5);
+    color: transparent;
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
+  }
+
+  &:focus::placeholder {
+    color: rgba($main-text-color, 0.5);
   }
 
   &:hover {
@@ -217,9 +219,5 @@
 
   @media (min-width: $tablet-width) {
     padding: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
